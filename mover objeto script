@@ -1,4 +1,4 @@
-//https://www.w3schools.com/graphics/tryit.asp?filename=trygame_controllers_moving 
+
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -10,7 +10,6 @@ canvas {
 </style>
 </head>
 <body onload="startGame()">
-<script>
 
 var myGamePiece;
 
@@ -82,3 +81,6 @@ function moveright() {
 
 <p>If you click a button the red square will start moving. Click the same button many times, and it will move faster and faster.</p>
 </body>
+
+
+

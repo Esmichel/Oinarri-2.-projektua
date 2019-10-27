@@ -5,16 +5,29 @@ list-style:none;
 text-decoration:none;
 }
 
+#lienzo{
+	background-image:url(Background.jpg);
+	/*background:"white";*/
+}
 body{
+
 overflow:hidden;
 }
 
 #contenedor{
-position:relative;
-margin:5vh auto;	
-height:2016;
-width:3840;
+	
+	position:relative;
+	margin:5vh auto;
+	width:1000px;
+	height:500px;
 }
-#lienzo {
-  background-image:url("https://www.xmple.com/wallpaper/graph-paper-purple-white-grid-3840x2160-c2-ffffff-9370db-l2-4-84-a-0-f-20.svg");
+
+#ampli{
+	display:block;
+	position:relative;
+	margin:5px 0;
+	padding:10px;
+	cursor:pointer;
 }
+
+

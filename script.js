@@ -1,35 +1,40 @@
 
-var frame = window.requestAnimationFrame ||
-			window.mozRequestAnimationFrame ||
-			window.webkitRequestAnimationFrame ||
-			window.msRequestAnimationFrame;
+var canvasWidth=1000;
+var canvasHeight=500;
+var x=0;
+var y=0
+var srcX;
+var srcY;
+var sheetWidth=864;
+var sheetHeight=280;
+var cols= 8;
+var rows=2;
+var width= sheetWidth/cols;
+var height= sheetHeight/rows;
 
-var Xposizioa =0;
-var numero = 0;
-var sprite =new Image();
-sprite.src= "personaje2editado.png";
-var canvas= document.querySelector ("#coinAnimation");
-var ctx= canvas.getContext("2d");
-console.log("ctx",ctx);
+var currentFrame= 0;
+var character= new Image();
+character.src = "character.png"
 
+var canvas= document.querySelector("this.canvas");
+canvas.width=canWidth;
+canvas.height=canHeight;
+var ctx = canvas.getContext ("2d");
 
+function updateFrame(){
 
-
-
-function tiempo(){
-
-if (numero >= 637){numero = 0}else{numero+=24}
-
-for(var i = 0; i <= numero; i+=80){
-
-	if(numero >= i){Xposizioa = i}
+currentFrame= ++currentFame % cols;
+srcX = currentFrame*width;
+srcY=0;
 }
 
-ctx.clearRect(0,340,80,90);
-ctx.drawImage(sprite,Xposizioa, 0, 110, 133, 0 , 340, 80, 100);
+function drawImage(){
 
-frame(tiempo)
+	updateFrame();
+	ctx.drawImage(character,srcX, srcY, width , height , x , y, width , height)
 
-}
+}	
 
-tiempo()
+setInterval(function(){
+	drawImage();
+},100);

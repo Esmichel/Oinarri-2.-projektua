@@ -3,31 +3,33 @@ margin:0;
 padding:0;
 list-style:none;
 text-decoration:none;
+background-color:black;
 }
 
-#lienzo{
-	background-image:url(Background.jpg);
-	/*background:"white";*/
-}
 body{
 
 overflow:hidden;
-}
-
-#contenedor{
-	
-	position:relative;
+position:relative;
 	margin:5vh auto;
 	width:1000px;
 	height:500px;
 }
+.titulo{
+	display: block;
+    width: 700px;
+    height: 400px;
+    margin: 0 auto;
+    position:absolute;
+    left:15%;
 
-#ampli{
-	display:block;
-	position:relative;
-	margin:5px 0;
-	padding:10px;
-	cursor:pointer;
 }
 
+#canvas{
+
+	display:block;
+	 position:absolute;
+    top:80%;
+
+
+}
 
